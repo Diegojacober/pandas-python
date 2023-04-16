@@ -22,6 +22,9 @@ df = pd.DataFrame({'Dia': dias, 'Nome': Nomes, 'Gastos': Gastos})
 # Uses unique values from specified index / columns to form axes of the resulting DataFrame.
 # This function does not support data aggregation, multiple values will result in a MultiIndex in the columns.
 
+#Para muitas linhas repetidas mas que contem sempre os mesmos valores em uma coluna,
+# da para transforma-los em colunas, como os nomes no exemplo abaixo, eram sempre os mesmos nomes
+#viraram colunas
 
 df_pivot = df.pivot(index='Dia',columns='Nome', values='Gastos')
 print(df_pivot)
